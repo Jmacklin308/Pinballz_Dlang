@@ -1,0 +1,8 @@
+{
+	"dscanner.ignoredKeys": [
+		"dscanner.style.phobos_naming_convention"
+	],
+	"autoHide.autoHideAuxiliaryBar": false,
+	"autoHide.autoHidePanel": false,
+	"autoHide.autoHideSideBar": false
+}

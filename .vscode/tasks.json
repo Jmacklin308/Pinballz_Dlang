@@ -1,0 +1,53 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "dub",
+			"run": false,
+			"cwd": "c:/DEV/DLang/Raylib/Raylib_ProjectOne",
+			"compiler": "$current",
+			"archType": "$current",
+			"buildType": "$current",
+			"configuration": "$current",
+			"problemMatcher": [
+				"$dmd"
+			],
+			"group": "build",
+			"label": "dub: Build raylib_projectone",
+			"detail": "dub build --compiler=dmd -a=x86_64 -b=debug -c=application"
+		},
+		{
+			"type": "dub",
+			"run": true,
+			"cwd": "c:/DEV/DLang/Raylib/Raylib_ProjectOne",
+			"compiler": "$current",
+			"archType": "$current",
+			"buildType": "$current",
+			"configuration": "$current",
+			"problemMatcher": [
+				"$dmd"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"label": "dub: Run raylib_projectone",
+			"detail": "dub run --compiler=dmd -a=x86_64 -b=debug -c=application"
+		},
+		{
+			"type": "dub",
+			"test": true,
+			"cwd": "c:/DEV/DLang/Raylib/Raylib_ProjectOne",
+			"compiler": "$current",
+			"archType": "$current",
+			"buildType": "$current",
+			"configuration": "$current",
+			"problemMatcher": [
+				"$dmd"
+			],
+			"group": "build",
+			"label": "dub: Test raylib_projectone",
+			"detail": "dub test --compiler=dmd -a=x86_64 -b=debug -c=application"
+		}
+	]
+}

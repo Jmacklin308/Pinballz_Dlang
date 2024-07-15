@@ -1,0 +1,16 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/raylib_projectone
+raylib_projectone.so
+raylib_projectone.dylib
+raylib_projectone.dll
+raylib_projectone.a
+raylib_projectone.lib
+raylib_projectone-test-*
+*.exe
+*.pdb
+*.o
+*.obj
+*.lst
