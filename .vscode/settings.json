@@ -4,5 +4,6 @@
 	],
 	"autoHide.autoHideAuxiliaryBar": false,
 	"autoHide.autoHidePanel": false,
-	"autoHide.autoHideSideBar": false
+	"autoHide.autoHideSideBar": false,
+	"todo-tree.tree.showBadges": true
 }

@@ -8,7 +8,7 @@ import input_manager;
 import level_manager;
 import camera_manager;
 
-//NOTE: avoid adding game_data here
+//NOTE: AVOID adding game_data here
 
 static class Game {
 
@@ -17,6 +17,7 @@ static class Game {
 		InitWindow(Config.SCREEN_WIDTH, Config.SCREEN_HEIGHT, "Hello game!");
 		SetTargetFPS(60);
 		Camera_Manager.load();
+		Level_Manager.Load();
 	}
 
 	//---------------------------------------------------
@@ -39,17 +40,10 @@ static class Game {
 	static void Draw() {
 		BeginDrawing();
 		{
-			//background
+			//background clear
 			ClearBackground(Colors.RAYWHITE);
-			DrawText(
-				"",
-				Config.SCREEN_WIDTH / 2,
-				Config.SCREEN_HEIGHT / 2,
-				12,
-				Colors.BLACK
-			);
 
-			//camera view
+			//camera view - anything in here is respective to the world and moves
 			BeginMode2D(Camera_Manager.camera);
 			{
 
@@ -67,6 +61,8 @@ static class Game {
 
 			}
 			EndMode2D();
+
+			//UI view - Anything drawn after here moves with the camera (UI, etc.)
 			Editor_UI.Draw();
 
 		}
