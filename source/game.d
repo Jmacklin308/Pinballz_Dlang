@@ -33,7 +33,6 @@ static class Game {
 
 		//show the editor when applicable
 		Editor_UI.Update();
-
 	}
 
 	//---------------------------------------------------
@@ -47,17 +46,8 @@ static class Game {
 			BeginMode2D(Camera_Manager.camera);
 			{
 
-				//draw a grid
-				rlPushMatrix();
-				rlTranslatef(0, 25 * 50, 0);
-				rlRotatef(90, 1, 0, 0);
-				DrawGrid(100, 50);
-				rlPopMatrix();
-
 				// Draw a reference circle
 				DrawRectangle(100, 100, 50, 50, Colors.RED);
-
-				//UI
 
 			}
 			EndMode2D();

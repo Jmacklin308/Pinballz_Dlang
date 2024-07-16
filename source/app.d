@@ -5,18 +5,12 @@ import raylib;
 import config;
 import game;
 
-void main()
-{
+void main() {
 	validateRaylibBinding();
-
 	Game.Load();
-
-	while (!WindowShouldClose())
-	{
+	while (!WindowShouldClose()) {
 		Game.Update();
 		Game.Draw();
 	}
-
 	Game.Close();
-
 }

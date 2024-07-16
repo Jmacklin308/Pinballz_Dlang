@@ -12,7 +12,7 @@ static class Camera_Manager {
 
 	static void Update() {
 
-		//move camera with right mouse
+		// Move camera with right mouse
 		if (IsMouseButtonDown(MouseButton.MOUSE_BUTTON_RIGHT)) {
 			Vector2 delta = GetMouseDelta();
 			delta = Vector2Scale(delta, -1.0f / camera.zoom);
@@ -20,8 +20,7 @@ static class Camera_Manager {
 			camera.target = Vector2Add(camera.target, delta);
 		}
 
-		//zoom based off mouse wheel
-		// Zoom based on mouse wheel
+		// Zoom based off mouse wheel
 		float wheel = GetMouseWheelMove();
 		if (wheel != 0) {
 			// Get the world point that is under the mouse
@@ -34,7 +33,6 @@ static class Camera_Manager {
 			// under the cursor to the screen space point under the cursor at any zoom
 			camera.target = mouseWorldPos;
 
-			// Zoom increment
 			const float zoomIncrement = 0.125f;
 
 			camera.zoom += (wheel * zoomIncrement);

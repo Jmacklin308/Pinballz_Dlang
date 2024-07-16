@@ -1,6 +1,6 @@
 {
 	"libs": [
-		"raylib"
+		"Build/raylib"
 	],
 	"lflags-posix": [
 		"-L."

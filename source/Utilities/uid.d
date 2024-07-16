@@ -10,7 +10,7 @@ class UID {
 	private static string[] activeUIDs;
 
 	this() {
-		uid = generateUID();
+		uid = GenerateUID();
 	}
 
 	this(string existingUID) {
@@ -21,7 +21,7 @@ class UID {
 		return uid;
 	}
 
-	private string generateUID() {
+	private string GenerateUID() {
 		auto rng = Random(unpredictableSeed);
 		auto chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 		auto length = 16;

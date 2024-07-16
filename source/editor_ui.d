@@ -4,6 +4,7 @@ import raylib;
 import raygui;
 import game_data;
 import config;
+import camera_manager;
 
 static class Editor_UI {
 
@@ -21,6 +22,7 @@ static class Editor_UI {
 	private static float _assetMenuWidth = 200;
 	private static float _assetMenuHeight = 400;
 	private static float _assetMenuMargin = 20;
+
 	//properties menu
 
 	static void Update() {
@@ -65,6 +67,18 @@ static class Editor_UI {
 		if (GuiTextBox(Rectangle(25, 215, 125, 30), _textBoxText.ptr, 64, _textBoxEditMode)) {
 			_textBoxEditMode = !_textBoxEditMode;
 		}
+
+		//Anything here will not follow the camera. It will be overlayed on the world
+		BeginMode2D(Camera_Manager.camera);
+		{
+			//draw a grid
+			rlPushMatrix();
+			rlTranslatef(0, 25 * 50, 0);
+			rlRotatef(90, 1, 0, 0);
+			DrawGrid(100, 50);
+			rlPopMatrix();
+		}
+		EndMode2D();
 
 	}
 }

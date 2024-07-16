@@ -23,7 +23,6 @@ static class Level_Manager {
 	}
 
 	static void Update() {
-
 	}
 
 	static void Draw() {
