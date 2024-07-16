@@ -17,6 +17,8 @@
 	"dependencies": {
 		"raylib-d": "~>5.0.1"
 	},
+	"targetType": "executable",
+	"targetPath": "/Build",
 	"authors": [
 		"jmacklin"
 	],
